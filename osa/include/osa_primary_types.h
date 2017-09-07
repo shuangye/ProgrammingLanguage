@@ -7,12 +7,12 @@
  */
 
 
-#if __i386 | _WIN32 | __arm__
+#if defined(__i386) || defined(_WIN32) || defined(__arm__)
 #define OSA_POINTER_SIZE        4
-#elif __WIN64 | __x86_64__ | __aarch64__
+#elif defined(__WIN64) || defined(__x86_64__) || defined(__aarch64__)
 #define OSA_POINTER_SIZE        8
 #else
-#error "Cannot detect pointer size"
+#error "Cannot determine pointer size"
 #endif
 
 
