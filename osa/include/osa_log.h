@@ -73,7 +73,7 @@
 
 #else  /* GCC */
 	#ifdef DEBUG
-    #define OSA_error(fmt, args ...)                                                            \
+    #define OSA_debug(fmt, args ...)                                                            \
         do {                                                                                    \
             fprintf(stdout, "[DEBUG] [%s] " "%s #%d %s() - " fmt,                               \
                 OSA_MODULE_NAME, __FILE__, __LINE__, __func__, ##args);                         \
