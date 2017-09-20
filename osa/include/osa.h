@@ -13,6 +13,7 @@
 #endif
 
 
+#include "osa_platforms.h"
 #include "osa_primary_types.h"
 #include "osa_types.h"
 #include "osa_status.h"
