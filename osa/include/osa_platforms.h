@@ -17,7 +17,7 @@
     #define OSA_OS_GNU_LINUX
 #elif defined(__linux__) || defined(linux) || defined(__linux)
     #define OSA_OS_LINUX_KERNEL
-#elif defined(macintosh) || defined(Macintosh) || defined(__APPLE__ && __MACH__)
+#elif defined(macintosh) || defined(Macintosh) || defined((__APPLE__) && (__MACH__))
     #define OSA_OS_MACOS
 #else
     #error "Cannot determine Operating System"

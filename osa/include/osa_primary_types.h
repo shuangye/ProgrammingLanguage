@@ -17,6 +17,9 @@
 
 
 typedef void*                   OSA_Handle;
+typedef char                    Char;
+typedef unsigned char           Uchar;
+
 
 #if (4 == OSA_POINTER_SIZE)
 

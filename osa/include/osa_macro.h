@@ -8,7 +8,6 @@
 
 
 
-#define OSA_clear(x)                                (memset(&(x), 0, sizeof(x)))
 #define OSA_arraySize(array)                        (sizeof(array) / sizeof((array)[0]))
 #define OSA_min(x, y)                               ((x) > (y) ? (y) : (x))
 #define OSA_max(x, y)                               ((x) > (y) ? (x) : (y))
