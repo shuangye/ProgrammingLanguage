@@ -170,6 +170,7 @@
 #define OSA_STATUS_EOWNERDEAD      130 /* Owner died */
 #define OSA_STATUS_ENOTRECOVERABLE 131 /* State not recoverable */
 
+#define OSA_STATUS_EGENERAL        255
 
 /*******************************************************************/
 

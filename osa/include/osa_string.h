@@ -10,7 +10,7 @@
 
 
 
-#define OSA_clear(x)                                (memset(&(x), 0, sizeof(x)))
+#define OSA_clear(p)                                (memset((p), 0, sizeof(*p)))
 #define OSA_strncpy(dst, src)                       (strncpy(dst, src, sizeof(dst)))
 
 
