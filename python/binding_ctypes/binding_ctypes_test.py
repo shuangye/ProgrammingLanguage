@@ -63,7 +63,6 @@ def test_ctypes_struct():
     
 if '__main__' == __name__:
     test_ctypes_bytes_io()
-    test_ctypes_string_io()
     test_ctypes_char_array()
     test_ctypes_wchar_array()
     test_ctypes_struct()

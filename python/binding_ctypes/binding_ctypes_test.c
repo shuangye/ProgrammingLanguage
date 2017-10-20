@@ -1,5 +1,5 @@
 /*
-  gcc -o libbinding_ctypes.so -fPIC -shared binding_ctypes.c
+  gcc -o libbinding_ctypes.so -fPIC -shared binding_ctypes_test.c
  */
 
  #include <stdio.h>
