@@ -5,6 +5,7 @@
 
 
 #include <osa.h>
+#include "osa_tests.h"
 
 
 int main(int argc, char *argv[])
@@ -14,6 +15,10 @@ int main(int argc, char *argv[])
     OSA_info("Hello.\n");
 
     OSA_info("OSA_roundUp(99, 16) = %d\n", OSA_roundUp(99, 16));
+
+    OSA_string_tests();
+
+    OSA_datetime_tests();
 
     return 0;
 }

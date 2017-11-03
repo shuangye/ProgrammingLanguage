@@ -1,5 +1,5 @@
 #include <assert.h>
-#include <osa_primary_types.h>
+#include <osa.h>
 
 
 int OSA_testPrimaryTypesSizes(void)
@@ -15,6 +15,8 @@ int OSA_testPrimaryTypesSizes(void)
     assert(8 == sizeof(Int64));
     assert(4 == sizeof(Float32));
     assert(8 == sizeof(Float64));
+
+    return OSA_STATUS_OK;
 }
 
 

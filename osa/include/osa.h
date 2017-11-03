@@ -20,6 +20,7 @@
 #include "osa_macro.h"
 #include "osa_log.h"
 #include "osa_string.h"
+#include "osa_datetime.h"
 
 
 #endif  /* __OSA_H__ */

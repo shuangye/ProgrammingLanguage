@@ -53,5 +53,14 @@ typedef double                  Float64;
 
 #endif
 
+
+typedef unsigned int            Bool;
+typedef Uint8                   Bool8;
+typedef Uint16                  Bool16;
+typedef Uint32                  Bool32;
+#define OSA_True                (1U)
+#define OSA_False               (0U)
+
+
 #endif  /* __OSA_PRIMARY_TYPES__ */
 

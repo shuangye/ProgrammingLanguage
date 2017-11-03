@@ -48,8 +48,9 @@ all:lib
 exe:$(EXE)
 lib:$(LIB)
 
-$(EXE): $(EXEOBJ)
+$(EXE): $(EXEOBJ) $(LIB)
 	$(LD) -o $@ $(LDFLAGS) $(EXEOBJ) $(COMMON_FLAGS) $(LIB) $(LIBS)
+	LD_LIBRARY_PATH=. ./$(EXE)
 $(LIB):$(OBJ)
 	$(LD) -o $@ $(SHARED_LIB_FLAGS) $(OBJ)
 
