@@ -23,5 +23,10 @@
 #include "osa_datetime.h"
 
 
+int OSA_init(void);
+
+int OSA_deinit(void);
+
+
 #endif  /* __OSA_H__ */
 

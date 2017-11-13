@@ -11,7 +11,7 @@ int OSA_string_tests(void);
 
 int OSA_datetime_tests();
 
-
+int OSA_log_tests();
 
 
 #ifdef __cplusplus

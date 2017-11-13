@@ -8,13 +8,13 @@ EXE = $(TARGET)
 CROSS :=
 
 INCLUDE := -I../include
-INCLUDE += -I/usr/lib/jvm/default-java/include -I/usr/lib/jvm/default-java/include/linux 
 LIB_DIR := 
 LIBS     =
-COMMON_FLAGS := -DOSA_MODULE_NAME='"$(TARGET)"' -DDEBUG
-COMMON_FLAGS += -Wall -Wextra -pipe -g
+COMMON_FLAGS := -DOSA_MODULE_NAME='"$(TARGET)"'
+COMMON_FLAGS += -Wall -Wextra -pipe
 
 SRC     = $(wildcard ../src/*.c)
+SRC    += $(wildcard ../src/log/*.c)
 CXXSRC += $(wildcard ../src/*.cpp)
 EXESRC += $(wildcard ../tests/*.c)
 # OBJDIR = ./objs
@@ -34,10 +34,10 @@ LDFLAGS  += -pie -fPIE
 SHARED_LIB_FLAGS += -fPIC -shared
 
 # Debug Options
-ifdef RELEASE
-  CPPFLAGS += -Os -mtune=native
+ifeq ($(config), debug)
+    COMMON_FLAGS += -DDEBUG -g -O0
 else
-  CPPFLAGS += -DDEBUG -g -O0
+    COMMON_FLAGS += -Os -mtune=native
 endif
 
 CFLAGS   += $(COMMON_FLAGS) $(SHARED_LIB_FLAGS)

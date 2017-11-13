@@ -25,7 +25,7 @@ int OSA_strTrim_tests(void)
     Char limitedBuffer[4];
     pSrc = "  Hell o  ";
     OSA_strTrim(pSrc, dest, sizeof(limitedBuffer));
-    OSA_info("`%s` trimmed to `%s` with buffer of size %u\n", pSrc, dest, sizeof(limitedBuffer));
+    OSA_info("`%s` trimmed to `%s` with buffer of size %lu\n", pSrc, dest, sizeof(limitedBuffer));
 
     return OSA_STATUS_OK;
 }

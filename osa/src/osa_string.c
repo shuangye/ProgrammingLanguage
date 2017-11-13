@@ -17,7 +17,7 @@ Bool OSA_strIsEmptyOrWhitespace(const Char *pStr)
     }
 
     for (i = 0; '\0' != pStr[i]; ++i) {
-        if (isspace(pStr[i])) {
+        if (!isspace(pStr[i])) {
             return OSA_False;
         }
     }

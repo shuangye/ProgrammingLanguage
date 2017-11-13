@@ -10,8 +10,10 @@
 
 int main(int argc, char *argv[])
 {
-    printf("Hello world!\n");
+    printf("Hello OSA!\n");
 
+    #if 0
+    
     OSA_info("Hello.\n");
 
     OSA_info("OSA_roundUp(99, 16) = %d\n", OSA_roundUp(99, 16));
@@ -19,6 +21,10 @@ int main(int argc, char *argv[])
     OSA_string_tests();
 
     OSA_datetime_tests();
+
+    #endif
+
+    OSA_log_tests();
 
     return 0;
 }
