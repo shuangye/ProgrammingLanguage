@@ -43,6 +43,7 @@ JNIEXPORT jint JNICALL Java_papillon_CppInterface_passString
 {
     const char *cStr = (*env)->GetStringUTFChars(env, str, 0);
     printf("%s: string from Java = %s\n", __func__, cStr);
+    env->ReleaseStringUTFChars(str, cStr); 
     return __LINE__;
 }
 

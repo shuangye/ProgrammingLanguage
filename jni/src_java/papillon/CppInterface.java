@@ -2,7 +2,7 @@
 
 Commands to generate the JNI headers:
 cd java_cpp\src_java
-"C:\Program Files\Java\jdk1.8.0_144\bin\javah.exe" -jn i -classpath . -d ../src_cpp/jni -v papillon.CppInterface
+"C:\Program Files\Java\jdk1.8.0_144\bin\javah.exe" -jni -classpath . -d ../src_cpp/jni -v papillon.CppInterface
 
  */
 

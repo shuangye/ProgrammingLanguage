@@ -20,7 +20,9 @@
 #include "osa_macro.h"
 #include "osa_log.h"
 #include "osa_string.h"
+#include "osa_list.h"
 #include "osa_datetime.h"
+#include "osa_misc.h"
 
 
 int OSA_init(void);

@@ -7,6 +7,10 @@
  */
 
 
+#define OSA_KB                                      (1 << 10)
+#define OSA_MB                                      (1 << 20)
+#define OSA_GB                                      (1 << 30)
+
 
 #define OSA_arraySize(array)                        (sizeof(array) / sizeof((array)[0]))
 #define OSA_min(x, y)                               ((x) > (y) ? (y) : (x))
@@ -29,6 +33,12 @@
             OSA_upperLimit((x), (upper));                                       \
         } while (0)
 
+
+#define OSA_offsetOf(TYPE, MEMBER)                 ((size_t) &((TYPE *)0)->MEMBER)
+
+#define OSA_containerOf(ptr, type, member) ({                                   \
+        const typeof( ((type *)0)->member ) *__mptr = (ptr);                    \
+        (type *)( (char *)__mptr - OSA_offsetOf(type,member) );})        
 
 
 #endif  /* __OSA_MACROS_H__ */
