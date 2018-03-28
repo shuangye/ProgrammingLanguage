@@ -21,6 +21,8 @@ bin/
 *.rule
 *.tmp
 Debug/
+.svn/*
+*/.svn/
 */Debug
 */debug
 */Debug/

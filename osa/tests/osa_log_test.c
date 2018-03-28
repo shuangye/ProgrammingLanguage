@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include <osa.h>
+#include <osa/osa.h>
 
 
 int OSA_log_tests()

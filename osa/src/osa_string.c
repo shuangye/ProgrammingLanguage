@@ -4,8 +4,8 @@
 
 
 #include <ctype.h>
-#include "osa_string.h"
-#include "osa_primary_types.h"
+#include <osa/osa_string.h>
+#include <osa/osa_primary_types.h>
 
 
 Bool OSA_strIsEmptyOrWhitespace(const Char *pStr)

@@ -7,7 +7,7 @@
 #include <stdio.h>
 #include <stdarg.h>
 #include <string.h>
-#include <osa.h>
+#include <osa/osa.h>
 
 
 typedef enum {

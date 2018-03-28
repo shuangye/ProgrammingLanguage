@@ -4,7 +4,7 @@
 
 
 
-#include <osa.h>
+#include <osa/osa.h>
 
 
 int OSA_init(void)

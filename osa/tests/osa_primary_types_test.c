@@ -1,5 +1,5 @@
 #include <assert.h>
-#include <osa.h>
+#include <osa/osa.h>
 
 
 int OSA_testPrimaryTypesSizes(void)

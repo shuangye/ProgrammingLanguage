@@ -4,7 +4,7 @@
 
 
 
-#include <osa.h>
+#include <osa/osa.h>
 #include "osa_tests.h"
 
 
