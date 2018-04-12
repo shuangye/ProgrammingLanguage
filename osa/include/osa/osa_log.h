@@ -24,13 +24,13 @@ extern "C" {
 #if defined(__ANDROID__)
 #include <android/log.h>  /* Android log lib must be linked (-llog) */
 
-    #ifdef DEBUG
+    #ifdef OSA_DEBUG
     #define OSA_debug(fmt, args...)                                                             \
         do {                                                                                    \
             __android_log_print(ANDROID_LOG_DEBUG, OSA_MODULE_NAME, "%s #%d - " fmt,            \
                 __FILE__, __LINE__, ##args);                                                    \
         } while (0)
-    #else  /* DEBUG */
+    #else  /* OSA_DEBUG */
     #define OSA_debug(fmt, args...)
     #endif
 
@@ -54,13 +54,13 @@ extern "C" {
 
 #elif defined(_MSC_VER)  /* Microsoft Visual C++ */
 
-    #ifdef DEBUG
+    #ifdef OSA_DEBUG
     #define OSA_debug(fmt, ...)                                                                 \
         do {                                                                                    \
             fprintf(stdout, "[DEBUG] [%s] " "%s #%d - " fmt,                                    \
                 OSA_MODULE_NAME, __FILE__, __LINE__, __VA_ARGS__);                              \
         } while (0)
-    #else  /* DEBUG */
+    #else  /* OSA_DEBUG */
     #define OSA_debug(fmt, ...)
     #endif
 
@@ -83,7 +83,7 @@ extern "C" {
         } while (0)
 
 #else  /* GCC */
-	#ifdef DEBUG
+	#ifdef OSA_DEBUG
     #define OSA_debug(fmt, args ...)                                                            \
         do {                                                                                    \
             fprintf(stdout, "[DEBUG] [%s] " "%s #%d - " fmt,                                    \
@@ -137,7 +137,7 @@ OSA_API void OSA__loge(OSA_LogHandle handle, const Char *pModule, const Char *pF
 
 #if defined(_MSC_VER)  /* Microsoft Visual C++ */
 
-#ifdef DEBUG
+#ifdef OSA_DEBUG
     #define OSA_logd(handle, fmt, ...)                                                           \
         do {                                                                                     \
             OSA__logd(handle, OSA_MODULE_NAME, __FILE__, __func__, __LINE__, fmt, __VA_ARGS__);  \
@@ -163,7 +163,7 @@ OSA_API void OSA__loge(OSA_LogHandle handle, const Char *pModule, const Char *pF
 
 #else
 
-#ifdef DEBUG
+#ifdef OSA_DEBUG
     #define OSA_logd(handle, fmt, args ...)                                                     \
         do {                                                                                    \
             OSA__logd(handle, OSA_MODULE_NAME, __FILE__, __func__, __LINE__, fmt, ##args);      \

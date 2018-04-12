@@ -7,6 +7,13 @@
  */
 
 
+#ifdef OSA_DEBUG
+#define OSA_STATIC 
+#else
+#define OSA_STATIC static
+#endif
+
+
 #define OSA_KB                                      (1 << 10)
 #define OSA_MB                                      (1 << 20)
 #define OSA_GB                                      (1 << 30)
